@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC, Fragment } from 'react';
 import { Inspector } from 'react-dev-inspector';
 
-const InspectorWrapper = process.env.NODE_ENV === 'development' ? Inspector : React.Fragment;
+const InspectorWrapper = process.env.NODE_ENV === 'development' ? Inspector : Fragment;
 
-const Layout: React.FC = ({ children }) => {
+const Layout: FC = ({ children }) => {
   return <InspectorWrapper>{children}</InspectorWrapper>;
 };
 
